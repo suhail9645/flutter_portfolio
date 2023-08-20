@@ -1,5 +1,7 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:web_project/about_me_section/about_me.dart';
 import 'package:web_project/description_section/description.dart';
 
 class HomePage extends StatelessWidget {
@@ -57,17 +59,37 @@ class HomePage extends StatelessWidget {
                                 SizedBox(
                                   height: screenHeight * 0.03,
                                 ),
-                                Text('MUHAMMED SUHAIL',
-                                    style: GoogleFonts.raleway(
-                                        fontSize: 38,
+                                AnimatedTextKit(
+                                  isRepeatingAnimation: false,
+                                  animatedTexts: [
+                                    TypewriterAnimatedText(
+                                      'MUHAMMED SUHAIL',
+                                      textStyle:  GoogleFonts.raleway(
+                                        fontSize: 37,
                                         color: Colors.black,
-                                        fontWeight: FontWeight.bold)),
-                                Text('Flutter Developer/Graphic Designer',
-                                    style: GoogleFonts.raleway(
-                                        fontSize: 18,
-                                        color: const Color.fromARGB(
-                                            255, 117, 115, 115),
-                                        fontWeight: FontWeight.bold)),
+                                        fontWeight: FontWeight.bold),
+                                        cursor: '|',
+                                      speed: const Duration(milliseconds: 200),
+                                    ),
+                                  ],
+                               
+                                ),
+                                AnimatedTextKit(
+                                  isRepeatingAnimation: false,
+                                  animatedTexts: [
+                                    TypewriterAnimatedText(
+                                      'Flutter Developer/Graphic Designer',
+                                      textStyle: GoogleFonts.raleway(
+                                          fontSize: 18,
+                                          color: const Color.fromARGB(
+                                              255, 117, 115, 115),
+                                          fontWeight: FontWeight.bold),
+                                        cursor: '|',
+                                      speed: const Duration(milliseconds: 100),
+                                    ),
+                                  ],
+                               
+                                )
                               ],
                             ),
                             Row(
@@ -153,7 +175,8 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-            const  Description()
+              const Description(),
+              const AboutME()
             ],
           ),
         ));
