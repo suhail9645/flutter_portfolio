@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:web_project/description_section/description.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -152,7 +153,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-             
+            const  Description()
             ],
           ),
         ));
