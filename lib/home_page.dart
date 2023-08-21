@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:web_project/about_me_section/about_me.dart';
 import 'package:web_project/description_section/description.dart';
+import 'package:web_project/portfolio_section/portfolio.dart';
 import 'package:web_project/skill_section/skill.dart';
 
 class HomePage extends StatelessWidget {
@@ -178,7 +179,8 @@ class HomePage extends StatelessWidget {
               ),
               const Description(),
               const AboutME(),
-              const SkillSection()
+              const SkillSection(),
+              const Portfolio()
             ],
           ),
         ));

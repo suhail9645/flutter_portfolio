@@ -9,9 +9,7 @@ class SkillSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    double screenHeight = size.height;
-    double screenWidth = size.width;
+   
     return Container(
       width: double.infinity,
       color: Colors.white,

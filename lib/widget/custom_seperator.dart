@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomUnderlying extends StatelessWidget {
   const CustomUnderlying({
-    super.key,
+    super.key, this.color,
   });
-
+final Color? color;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -15,7 +15,7 @@ class CustomUnderlying extends StatelessWidget {
           height: 2,
           width: 30,
           decoration: BoxDecoration(
-              color: Colors.black,
+              color:color?? Colors.black,
               borderRadius: BorderRadius.circular(5)),
         ),
         ...List.generate(
@@ -29,7 +29,7 @@ class CustomUnderlying extends StatelessWidget {
               height: 11,
               width: 2,
               decoration: BoxDecoration(
-                color: Colors.black,
+                color: color?? Colors.black,
                 borderRadius: BorderRadius.circular(5),
               ),
             ),
@@ -45,7 +45,7 @@ class CustomUnderlying extends StatelessWidget {
               height: 11,
               width: 2,
               decoration: BoxDecoration(
-                color: Colors.black,
+                color: color?? Colors.black,
                 borderRadius: BorderRadius.circular(5),
               ),
             ),
@@ -56,7 +56,7 @@ class CustomUnderlying extends StatelessWidget {
           height: 2,
           width: 30,
           decoration: BoxDecoration(
-              color: Colors.black,
+              color: color?? Colors.black,
               borderRadius: BorderRadius.circular(5)),
         ),
       ],

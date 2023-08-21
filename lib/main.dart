@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:web_project/home_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
