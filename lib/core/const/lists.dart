@@ -16,3 +16,34 @@ List<String> skillDescriptions = [
   "While every applications and websites need updations and maintaining, I can also maintain you projects ,",
   "As complete learner, I will always try to learn new technolagies and industrial trends, I can quickly adapt new technolagies and i will implement in my projects"
 ];
+
+List<String> skillusing = [
+  'assets/flutter.png',
+  'assets/dart.png',
+  'assets/bloc.png',
+  'assets/firebase.png',
+  'assets/getx.png',
+  'assets/git_l.png',
+  'assets/html.png',
+  'assets/figma.png'
+];
+
+List<String> skillusingNames = [
+  'FLUTTER',
+  'DART',
+  'BLOC',
+  'FIREBASE',
+  'GETX',
+  'GIT',
+  'HTML5',
+  'FIGMA'
+];
+
+List<String> skillLearning = [
+  'assets/kotlin.png',
+  'assets/java.png',
+  'assets/node.png',
+  'assets/python.png'
+];
+
+List<String>skillLearningNames=['KOTLIN','JAVA','NODE JS','PYTHON'];

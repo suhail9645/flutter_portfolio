@@ -67,6 +67,18 @@ flutter:
     - assets/develop.png
     - assets/maintain.png
     - assets/learn.png
+    - assets/flutter.png
+    - assets/dart.png
+    - assets/bloc.png
+    - assets/firebase.png
+    - assets/getx.png
+    - assets/git_l.png
+    - assets/html.png
+    - assets/figma.png
+    - assets/kotlin.png
+    - assets/java.png
+    - assets/node.png
+    - assets/python.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

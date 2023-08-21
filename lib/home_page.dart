@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:web_project/about_me_section/about_me.dart';
 import 'package:web_project/description_section/description.dart';
+import 'package:web_project/skill_section/skill.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -17,7 +18,7 @@ class HomePage extends StatelessWidget {
       'assets/leetcode.png'
     ];
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 27, 27, 27),
+        backgroundColor: Colors.white,
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
@@ -176,7 +177,8 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               const Description(),
-              const AboutME()
+              const AboutME(),
+              const SkillSection()
             ],
           ),
         ));

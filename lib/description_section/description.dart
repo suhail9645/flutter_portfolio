@@ -10,6 +10,7 @@ class Description extends StatelessWidget {
     double screenWidth = size.width;
     return Container(
       width: double.infinity,
+      color: Colors.black,
       child: Row(
         children: [
           Expanded(

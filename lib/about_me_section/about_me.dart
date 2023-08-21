@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:web_project/widget/custom_button.dart';
 
 import '../core/const/lists.dart';
+import '../core/const/widget.dart';
 import '../widget/custom_seperator.dart';
 
 class AboutME extends StatelessWidget {
@@ -12,32 +14,16 @@ class AboutME extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double screenHeight = size.height;
     double screenWidth = size.width;
-   const Widget spaceForHeight=SizedBox(height: 40,);
+  
     return Container(
       width: double.infinity,
-      height: screenHeight*1.20,
+      // height: screenHeight*1.20,
       color: Colors.white,
       child: Column(
        
         children: [
           spaceForHeight,
-          Container(
-            height: 50,
-            width: 200,
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black, width: 4),
-            ),
-            child: Center(
-              child: Text(
-                'About Me',
-                style: GoogleFonts.montserrat(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 2),
-              ),
-            ),
-          ),
+        const CustomButtom(text: 'About Me'),
         spaceForHeight,
           SizedBox(
             width: screenWidth * 0.60,
