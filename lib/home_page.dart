@@ -2,12 +2,20 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:web_project/about_me_section/about_me.dart';
+import 'package:web_project/contact_section/contact_section.dart';
 import 'package:web_project/description_section/description.dart';
 import 'package:web_project/portfolio_section/portfolio.dart';
 import 'package:web_project/skill_section/skill.dart';
+import 'package:get/get.dart';
 
+import 'home_page_controller.dart';
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+ 
+
+ final HomePageController controller = Get.put(HomePageController());
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -66,15 +74,14 @@ class HomePage extends StatelessWidget {
                                   animatedTexts: [
                                     TypewriterAnimatedText(
                                       'MUHAMMED SUHAIL',
-                                      textStyle:  GoogleFonts.raleway(
-                                        fontSize: 37,
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                        cursor: '|',
+                                      textStyle: GoogleFonts.raleway(
+                                          fontSize: 37,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold),
+                                      cursor: '|',
                                       speed: const Duration(milliseconds: 200),
                                     ),
                                   ],
-                               
                                 ),
                                 AnimatedTextKit(
                                   isRepeatingAnimation: false,
@@ -86,11 +93,10 @@ class HomePage extends StatelessWidget {
                                           color: const Color.fromARGB(
                                               255, 117, 115, 115),
                                           fontWeight: FontWeight.bold),
-                                        cursor: '|',
+                                      cursor: '|',
                                       speed: const Duration(milliseconds: 100),
                                     ),
                                   ],
-                               
                                 )
                               ],
                             ),
@@ -144,9 +150,55 @@ class HomePage extends StatelessWidget {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      const Text('Home'),
-                                      const Text('My works'),
-                                      const Text('About Me'),
+                                      Obx(
+                                        () =>  InkWell(
+                                          onHover: (value) {
+                                           
+                                          controller.onHove(controller.textSize.value, controller.textColor.value);
+                                          },
+                                          onTap: () {
+                                            
+                                          },
+                                          child:  AnimatedDefaultTextStyle(
+                                              duration:const Duration(milliseconds: 200),
+                                              style: TextStyle(fontSize: controller.textSize.value,color: controller.textColor.value),
+                                              child:const Text('Home',),
+                                            ),
+                                          ),
+                                      ),
+                                      
+                                         Obx(
+                                        () =>  InkWell(
+                                          onHover: (value) {
+                                           
+                                          controller.onHove(controller.textSize.value, controller.textColor.value);
+                                          },
+                                          onTap: () {
+                                            
+                                          },
+                                          child:  AnimatedDefaultTextStyle(
+                                              duration:const Duration(milliseconds: 200),
+                                              style: TextStyle(fontSize: controller.textSize.value,color: controller.textColor.value),
+                                              child:const Text('My Works',),
+                                            ),
+                                          ),
+                                      ),
+                                           Obx(
+                                        () =>  InkWell(
+                                          onHover: (value) {
+                                           
+                                          controller.onHove(controller.textSize.value, controller.textColor.value);
+                                          },
+                                          onTap: () {
+                                            
+                                          },
+                                          child:  AnimatedDefaultTextStyle(
+                                              duration:const Duration(milliseconds: 200),
+                                              style: TextStyle(fontSize: controller.textSize.value,color: controller.textColor.value),
+                                              child:const Text('About Me',),
+                                            ),
+                                          ),
+                                      ),
                                       OutlinedButton(
                                           style: const ButtonStyle(
                                               backgroundColor:
@@ -180,7 +232,8 @@ class HomePage extends StatelessWidget {
               const Description(),
               const AboutME(),
               const SkillSection(),
-              const Portfolio()
+              const Portfolio(),
+              const ContactMe()
             ],
           ),
         ));
