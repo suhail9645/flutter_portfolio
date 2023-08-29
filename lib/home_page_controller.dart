@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomePageController extends  GetxController{
-  final textColor= Colors.white.obs;
-  final textSize=15.0.obs;
-  onHove(double currentSize,Color currentColor){
-    if(currentSize==15){
-       textSize(20);
-    }else{
-      textSize(15);
-    }
-    if(currentColor==Colors.white){
-      textColor(Colors.amber);
-    }else{
-      textColor(Colors.white);
-    }
+class HomePageController extends GetxController {
+  final textColor = Colors.white.obs;
+  final textSize = 15.0.obs;
+  final List<bool> navbarTextsValue = List.filled(3, false).obs;
+  onTextHover(int index) {
+  navbarTextsValue[index]=!navbarTextsValue[index];
   }
+
+ 
 }

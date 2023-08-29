@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:web_project/about_me_section/about_me.dart';
 import 'package:web_project/contact_section/contact_section.dart';
+import 'package:web_project/core/const/lists.dart';
 import 'package:web_project/description_section/description.dart';
 import 'package:web_project/portfolio_section/portfolio.dart';
 import 'package:web_project/skill_section/skill.dart';
 import 'package:get/get.dart';
 
 import 'home_page_controller.dart';
+
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
- 
-
- final HomePageController controller = Get.put(HomePageController());
+  final HomePageController controller = Get.put(HomePageController());
 
   @override
   Widget build(BuildContext context) {
@@ -87,9 +87,10 @@ class HomePage extends StatelessWidget {
                                   isRepeatingAnimation: false,
                                   animatedTexts: [
                                     TypewriterAnimatedText(
-                                      'Flutter Developer/Graphic Designer',
+                                      'Flutter Developer',
                                       textStyle: GoogleFonts.raleway(
-                                          fontSize: 18,
+                                          letterSpacing: 2,
+                                          fontSize: 25,
                                           color: const Color.fromARGB(
                                               255, 117, 115, 115),
                                           fontWeight: FontWeight.bold),
@@ -150,66 +151,52 @@ class HomePage extends StatelessWidget {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Obx(
-                                        () =>  InkWell(
-                                          onHover: (value) {
-                                           
-                                          controller.onHove(controller.textSize.value, controller.textColor.value);
-                                          },
-                                          onTap: () {
-                                            
-                                          },
-                                          child:  AnimatedDefaultTextStyle(
-                                              duration:const Duration(milliseconds: 200),
-                                              style: TextStyle(fontSize: controller.textSize.value,color: controller.textColor.value),
-                                              child:const Text('Home',),
+                                      ...List.generate(
+                                        3,
+                                        (index) => Obx(
+                                          () => InkWell(
+                                            onHover: (value) {
+                                              controller.onTextHover(index);
+                                            },
+                                            onTap: () {},
+                                            child: AnimatedDefaultTextStyle(
+                                              duration: const Duration(
+                                                  milliseconds: 100),
+                                              style: TextStyle(
+                                                  fontSize: controller
+                                                              .navbarTextsValue[
+                                                          index]
+                                                      ? 19
+                                                      : 14,
+                                                  color: controller
+                                                              .navbarTextsValue[
+                                                          index]
+                                                      ? Colors.amber
+                                                      : Colors.white),
+                                              child: Text(navbarTexts[index]),
                                             ),
                                           ),
+                                        ),
                                       ),
-                                      
-                                         Obx(
-                                        () =>  InkWell(
-                                          onHover: (value) {
-                                           
-                                          controller.onHove(controller.textSize.value, controller.textColor.value);
-                                          },
-                                          onTap: () {
-                                            
-                                          },
-                                          child:  AnimatedDefaultTextStyle(
-                                              duration:const Duration(milliseconds: 200),
-                                              style: TextStyle(fontSize: controller.textSize.value,color: controller.textColor.value),
-                                              child:const Text('My Works',),
-                                            ),
-                                          ),
+                                      Container(
+                                        decoration:  BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                            gradient:const LinearGradient(colors: [
+                                          Color.fromARGB(255, 28, 3, 89),
+                                          Colors.black,
+                                          Color.fromARGB(255, 20, 2, 67)
+                                        ])),
+                                        child: ElevatedButton(
+                                            style: const ButtonStyle(
+                                              backgroundColor: MaterialStatePropertyAll(Colors.transparent)
+                                              ),
+                                            onPressed: () {},
+                                            child: const Text(
+                                              'Message Me',
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            )),
                                       ),
-                                           Obx(
-                                        () =>  InkWell(
-                                          onHover: (value) {
-                                           
-                                          controller.onHove(controller.textSize.value, controller.textColor.value);
-                                          },
-                                          onTap: () {
-                                            
-                                          },
-                                          child:  AnimatedDefaultTextStyle(
-                                              duration:const Duration(milliseconds: 200),
-                                              style: TextStyle(fontSize: controller.textSize.value,color: controller.textColor.value),
-                                              child:const Text('About Me',),
-                                            ),
-                                          ),
-                                      ),
-                                      OutlinedButton(
-                                          style: const ButtonStyle(
-                                              backgroundColor:
-                                                  MaterialStatePropertyAll(
-                                                      Colors.white)),
-                                          onPressed: () {},
-                                          child: const Text(
-                                            'Message Me',
-                                            style:
-                                                TextStyle(color: Colors.black),
-                                          )),
                                     ],
                                   ),
                                 ),

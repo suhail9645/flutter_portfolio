@@ -59,3 +59,4 @@ List<String>projectNames=['FITX','README','NETFLIX CLONE','STUDENT MANAGMENT'];
 List<String>projectPlayStorelinks=['https://play.google.com/store/apps/details?id=com.mspk.FitX','https://play.google.com/store/apps/details?id=com.mspk.read_me','',''];
 List<String>projectGitlinks=['https://github.com/suhail9645/fitx_user','https://github.com/suhail9645/readme','https://github.com/suhail9645/netflix_clone','https://github.com/suhail9645/student_project'];
 List<String>textFormhints=['Enter your name','Enter your Email address','Enter phone number','Your message'];
+List<String>navbarTexts=['Home','My Works','About Me'];
