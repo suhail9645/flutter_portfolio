@@ -4,10 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:web_project/about_me_section/about_me.dart';
 import 'package:web_project/contact_section/contact_section.dart';
 import 'package:web_project/core/const/lists.dart';
+import 'package:web_project/core/const/widget.dart';
 import 'package:web_project/description_section/description.dart';
 import 'package:web_project/portfolio_section/portfolio.dart';
 import 'package:web_project/skill_section/skill.dart';
 import 'package:get/get.dart';
+import 'package:web_project/widget/home_page_side_container.dart';
 
 import 'home_page_controller.dart';
 
@@ -24,7 +26,8 @@ class HomePage extends StatelessWidget {
     List<String> linkImageList = [
       'assets/linkedin.png',
       'assets/git.png',
-      'assets/leetcode.png'
+      'assets/leetcode.png',
+      'assets/instgram.png'
     ];
     return Scaffold(
         backgroundColor: Colors.white,
@@ -38,95 +41,102 @@ class HomePage extends StatelessWidget {
                     // mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Container(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: screenWidth * 0.10, vertical: 10),
+                        // padding: EdgeInsets.symmetric(
+                        //     horizontal: screenWidth * 0.10, vertical: 10),
                         height: screenHeight,
                         width: screenWidth / 2,
                         color: Colors.white,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        child: Row(
                           children: [
-                            Row(
-                              children: [
-                                Text(
-                                  'MSPK',
-                                  style: GoogleFonts.josefinSans(
-                                      fontSize: 45,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold),
-                                )
-                              ],
-                            ),
+                            HomePageSideContainer(linkImageList: linkImageList),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text('Hi, I am ',
-                                    style: GoogleFonts.raleway(
-                                        fontSize: 20,
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold)),
-                                SizedBox(
-                                  height: screenHeight * 0.03,
-                                ),
-                                AnimatedTextKit(
-                                  isRepeatingAnimation: false,
-                                  animatedTexts: [
-                                    TypewriterAnimatedText(
-                                      'MUHAMMED SUHAIL',
-                                      textStyle: GoogleFonts.raleway(
-                                          fontSize: 37,
+                                Row(
+                                  children: [
+                                    Text(
+                                      'MSPK',
+                                      style: GoogleFonts.josefinSans(
+                                          fontSize: 45,
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold),
-                                      cursor: '|',
-                                      speed: const Duration(milliseconds: 200),
-                                    ),
+                                    )
                                   ],
                                 ),
-                                AnimatedTextKit(
-                                  isRepeatingAnimation: false,
-                                  animatedTexts: [
-                                    TypewriterAnimatedText(
-                                      'Flutter Developer',
-                                      textStyle: GoogleFonts.raleway(
-                                          letterSpacing: 2,
-                                          fontSize: 25,
-                                          color: const Color.fromARGB(
-                                              255, 117, 115, 115),
-                                          fontWeight: FontWeight.bold),
-                                      cursor: '|',
-                                      speed: const Duration(milliseconds: 100),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Hi, I am ',
+                                        style: GoogleFonts.raleway(
+                                            fontSize: 20,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold)),
+                                    SizedBox(
+                                      height: screenHeight * 0.03,
                                     ),
+                                    AnimatedTextKit(
+                                      isRepeatingAnimation: false,
+                                      animatedTexts: [
+                                        TypewriterAnimatedText(
+                                          'MUHAMMED SUHAIL',
+                                          textStyle: GoogleFonts.raleway(
+                                              fontSize: 37,
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold),
+                                          cursor: '|',
+                                          speed:
+                                              const Duration(milliseconds: 200),
+                                        ),
+                                      ],
+                                    ),
+                                    AnimatedTextKit(
+                                      isRepeatingAnimation: false,
+                                      animatedTexts: [
+                                        TypewriterAnimatedText(
+                                          'Flutter Developer',
+                                          textStyle: GoogleFonts.raleway(
+                                              letterSpacing: 2,
+                                              fontSize: 25,
+                                              color: const Color.fromARGB(
+                                                  255, 117, 115, 115),
+                                              fontWeight: FontWeight.bold),
+                                          cursor: '|',
+                                          speed:
+                                              const Duration(milliseconds: 100),
+                                        ),
+                                      ],
+                                    )
                                   ],
+                                ),
+                                Row(
+                                  children: List.generate(
+                                      3,
+                                      (index) => Container(
+                                            margin: const EdgeInsets.only(
+                                                right: 20),
+                                            height: 40,
+                                            width: 40,
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                  image: AssetImage(
+                                                      linkImageList[index])),
+                                              color: const Color.fromARGB(
+                                                  255, 219, 218, 215),
+                                              boxShadow: const [
+                                                BoxShadow(
+                                                  blurRadius: 2.0,
+                                                  offset: Offset(0, 2),
+                                                ),
+                                              ],
+                                            ),
+                                          )),
+                                ),
+                                SizedBox(
+                                  height: screenHeight * 0.10,
                                 )
                               ],
                             ),
-                            Row(
-                              children: List.generate(
-                                  3,
-                                  (index) => Container(
-                                        margin:
-                                            const EdgeInsets.only(right: 20),
-                                        height: 40,
-                                        width: 40,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                              image: AssetImage(
-                                                  linkImageList[index])),
-                                          color: const Color.fromARGB(
-                                              255, 219, 218, 215),
-                                          boxShadow: const [
-                                            BoxShadow(
-                                              blurRadius: 2.0,
-                                              offset: Offset(0, 2),
-                                            ),
-                                          ],
-                                        ),
-                                      )),
-                            ),
-                            SizedBox(
-                              height: screenHeight * 0.10,
-                            )
                           ],
                         ),
                       ),
@@ -179,17 +189,20 @@ class HomePage extends StatelessWidget {
                                         ),
                                       ),
                                       Container(
-                                        decoration:  BoxDecoration(
-                                          borderRadius: BorderRadius.circular(10),
-                                            gradient:const LinearGradient(colors: [
-                                          Color.fromARGB(255, 28, 3, 89),
-                                          Colors.black,
-                                          Color.fromARGB(255, 20, 2, 67)
-                                        ])),
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                            gradient:
+                                                const LinearGradient(colors: [
+                                              Color.fromARGB(255, 28, 3, 89),
+                                              Colors.black,
+                                              Color.fromARGB(255, 20, 2, 67)
+                                            ])),
                                         child: ElevatedButton(
                                             style: const ButtonStyle(
-                                              backgroundColor: MaterialStatePropertyAll(Colors.transparent)
-                                              ),
+                                                backgroundColor:
+                                                    MaterialStatePropertyAll(
+                                                        Colors.transparent)),
                                             onPressed: () {},
                                             child: const Text(
                                               'Message Me',
