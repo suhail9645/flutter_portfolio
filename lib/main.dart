@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:web_project/home_page.dart';
 import 'package:get/get.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
@@ -15,13 +16,14 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme:  ThemeData(
+      theme: ThemeData(
+       
         fontFamily: GoogleFonts.rubik().fontFamily,
-          useMaterial3: true,
+        useMaterial3: true,
         //  scaffoldBackgroundColor: Color.fromARGB(255, 24, 24, 24),
-          brightness: Brightness.dark,
-        ),
-      home:  HomePage(),
+        brightness: Brightness.dark,
+      ),
+      home: HomePage(),
     );
   }
 }

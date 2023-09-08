@@ -14,76 +14,104 @@ class AboutME extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double screenHeight = size.height;
     double screenWidth = size.width;
-  
+
     return Container(
       width: double.infinity,
       // height: screenHeight*1.20,
-      color: Colors.white,
+      color: Color(0xFF11071F),
       child: Column(
-       
         children: [
           spaceForHeight,
-        const CustomButtom(text: 'About Me'),
-        spaceForHeight,
+          const CustomButtom(text: 'About Me'),
+          spaceForHeight,
           SizedBox(
             width: screenWidth * 0.60,
             child: Text(
               'Passionate Flutter developer with a strong background in creating mobile applications.I am genuinely enthusiastic about problem-solving, and I thrive in challenging situations where I can apply my analytical skills to develop efficient solutions. As a lifelong learner, I have a deep interest in expanding my knowledge and staying abreast of the latest trends and advancements in the world of mobile app development.',
-              style: GoogleFonts.openSans(
-                color: Colors.black,
-              ),
+              style: GoogleFonts.openSans(),
               textAlign: TextAlign.center,
             ),
           ),
-         spaceForHeight,
+          spaceForHeight,
           const CustomUnderlying(),
-           spaceForHeight,
-          SizedBox(
+          spaceForHeight,
+          Container(
             width: 800,
-            
-            child: GridView.builder(
-              itemCount: 4,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  mainAxisSpacing: 20,
-                  crossAxisSpacing: 20,
-                  mainAxisExtent: 180,
-                  crossAxisCount: 2),
-              itemBuilder: (context, index) => Stack(
-                children: [
-                  Image.asset(
-                    assetImageList[index],
-                    height: 30,
-                    width: 50,
+            height: 500,
+            color: Colors.white,
+            child: Stack(
+              children: [
+                Align(
+                  alignment: Alignment(0, -0.5),
+                  child: Container(
+                  
+                    height: screenWidth * 0.50,
+                    width: screenWidth * 0.40,
+                    decoration: BoxDecoration(color: Colors.amber, shape: BoxShape.circle),
                   ),
-                   Padding(
-                    padding:const EdgeInsets.only(left: 24, top: 7),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                ),
+                GridView.builder(
+                  itemCount: 4,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      mainAxisSpacing: 20,
+                      crossAxisSpacing: 20,
+                      mainAxisExtent: 180,
+                      crossAxisCount: 2),
+                  itemBuilder: (context, index) => Container(
+                    padding: const EdgeInsets.only(top: 15),
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(
+                          begin: Alignment.bottomRight,
+                          end: Alignment.topLeft,
+                          colors: [
+                            Color(0xFF38126D),
+                            Color(0xFF130428),
+                            Color(0xFF251043),
+                            Color(0xFF261045),
+                          ]),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Stack(
                       children: [
-                        Text(
-                          skillHeaders[index],
-                          style:const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.black,
-                            letterSpacing: 3,
+                        Image.asset(
+                          assetImageList[index],
+                          height: 30,
+                          width: 50,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 24, top: 7),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                skillHeaders[index],
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                  color: Color.fromARGB(255, 167, 164, 164),
+                                  letterSpacing: 3,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 13,
+                              ),
+                              Text(
+                                skillDescriptions[index],
+                                style: GoogleFonts.openSans(),
+                              )
+                            ],
                           ),
-                        ),
-                      const  SizedBox(
-                          height: 13,
-                        ),
-                        Text(
-                          skillDescriptions[index],style: GoogleFonts.openSans(color:Color.fromARGB(255, 57, 55, 55) ),)
+                        )
                       ],
                     ),
-                  )
-                ],
-              ),
+                  ),
+                ),
+              ],
             ),
           ),
-           const CustomUnderlying(),
+          const CustomUnderlying(),
         ],
       ),
     );

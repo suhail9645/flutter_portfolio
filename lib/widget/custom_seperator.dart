@@ -15,7 +15,7 @@ final Color? color;
           height: 2,
           width: 30,
           decoration: BoxDecoration(
-              color:color?? Colors.black,
+              color:color?? Colors.white,
               borderRadius: BorderRadius.circular(5)),
         ),
         ...List.generate(
@@ -29,7 +29,7 @@ final Color? color;
               height: 11,
               width: 2,
               decoration: BoxDecoration(
-                color: color?? Colors.black,
+                color: color?? Colors.white,
                 borderRadius: BorderRadius.circular(5),
               ),
             ),
@@ -45,7 +45,7 @@ final Color? color;
               height: 11,
               width: 2,
               decoration: BoxDecoration(
-                color: color?? Colors.black,
+                color: color?? Colors.white,
                 borderRadius: BorderRadius.circular(5),
               ),
             ),
@@ -56,7 +56,7 @@ final Color? color;
           height: 2,
           width: 30,
           decoration: BoxDecoration(
-              color: color?? Colors.black,
+              color: color?? Colors.white,
               borderRadius: BorderRadius.circular(5)),
         ),
       ],

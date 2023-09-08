@@ -38,11 +38,8 @@ class HomePage extends StatelessWidget {
               Stack(
                 children: [
                   Row(
-                    // mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Container(
-                        // padding: EdgeInsets.symmetric(
-                        //     horizontal: screenWidth * 0.10, vertical: 10),
                         height: screenHeight,
                         width: screenWidth / 2,
                         color: Colors.white,
@@ -75,20 +72,31 @@ class HomePage extends StatelessWidget {
                                     SizedBox(
                                       height: screenHeight * 0.03,
                                     ),
-                                    AnimatedTextKit(
-                                      isRepeatingAnimation: false,
-                                      animatedTexts: [
-                                        TypewriterAnimatedText(
-                                          'MUHAMMED SUHAIL',
-                                          textStyle: GoogleFonts.raleway(
-                                              fontSize: 37,
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.bold),
-                                          cursor: '|',
-                                          speed:
-                                              const Duration(milliseconds: 200),
-                                        ),
-                                      ],
+                                    SizedBox(
+                                      width: screenWidth * 0.35,
+                                      child: Row(
+                                        children: [
+                                          Expanded(
+                                            child: AnimatedTextKit(
+                                              isRepeatingAnimation: false,
+                                              animatedTexts: [
+                                                TypewriterAnimatedText(
+                                                  'MUHAMMED SUHAIL',
+                                                  textStyle:
+                                                      GoogleFonts.raleway(
+                                                          fontSize: 37,
+                                                          color: Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.bold),
+                                                  cursor: '|',
+                                                  speed: const Duration(
+                                                      milliseconds: 200),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                     AnimatedTextKit(
                                       isRepeatingAnimation: false,
@@ -109,28 +117,45 @@ class HomePage extends StatelessWidget {
                                     )
                                   ],
                                 ),
+                                SizedBox(
+                                  width: screenWidth * 0.30,
+                                  child: const Row(
+                                    children: [
+                                      Expanded(
+                                        child: Text(
+                                          'I am Capable for creating excelent mobile and web application,I can handle every step from concept to deployment',
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                                 Row(
-                                  children: List.generate(
-                                      3,
-                                      (index) => Container(
-                                            margin: const EdgeInsets.only(
-                                                right: 20),
-                                            height: 40,
-                                            width: 40,
-                                            decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                  image: AssetImage(
-                                                      linkImageList[index])),
-                                              color: const Color.fromARGB(
-                                                  255, 219, 218, 215),
-                                              boxShadow: const [
-                                                BoxShadow(
-                                                  blurRadius: 2.0,
-                                                  offset: Offset(0, 2),
-                                                ),
-                                              ],
-                                            ),
-                                          )),
+                                  children: [
+                                    SizedBox(
+                                      width: screenWidth * 0.07,
+                                    ),
+                                    Container(
+                                      height: 40,
+                                      width: 140,
+                                      decoration: BoxDecoration(
+                                        gradient: const LinearGradient(colors: [
+                                          Color.fromARGB(255, 28, 3, 89),
+                                          Color.fromARGB(207, 0, 0, 0),
+                                          Color.fromARGB(255, 20, 2, 67)
+                                        ]),
+                                        borderRadius: BorderRadius.circular(25),
+                                      ),
+                                      child: const Center(
+                                          child: Text(
+                                        'Download CV',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      )),
+                                    ),
+                                  ],
                                 ),
                                 SizedBox(
                                   height: screenHeight * 0.10,
@@ -229,7 +254,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              const Description(),
+              // const Description(),
               const AboutME(),
               const SkillSection(),
               const Portfolio(),

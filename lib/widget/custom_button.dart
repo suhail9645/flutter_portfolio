@@ -11,13 +11,13 @@ final Color? color;
             height: 50,
             width: 200,
             decoration: BoxDecoration(
-              border: Border.all(color:color?? Colors.black, width: 4),
+              border: Border.all(color:color?? const Color.fromARGB(255, 252, 251, 251), width: 4),
             ),
             child: Center(
               child: Text(
                 text,
                 style: GoogleFonts.montserrat(
-                    color:color?? Colors.black,
+                    color:color?? const Color.fromARGB(255, 243, 241, 241),
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
                    ),
