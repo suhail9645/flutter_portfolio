@@ -169,7 +169,7 @@ class HomePage extends StatelessWidget {
                         height: screenHeight,
                         width: screenWidth / 2,
                         decoration: const BoxDecoration(
-                            color: Color.fromARGB(255, 12, 12, 12),
+                           color: const Color(0xFF11071F),
                             image: DecorationImage(
                                 image: AssetImage('assets/image.png'),
                                 fit: BoxFit.cover)),

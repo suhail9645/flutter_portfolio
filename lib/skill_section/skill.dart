@@ -9,10 +9,9 @@ class SkillSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   
     return Container(
       width: double.infinity,
-      color: Colors.white,
+      color: const Color(0xFF11071F),
       child: Column(
         children: [
           spaceForHeight,
@@ -24,7 +23,7 @@ class SkillSection extends StatelessWidget {
               'USING NOW :',
               style: GoogleFonts.montserrat(
                   fontSize: 18,
-                  color: Colors.black,
+                  color: Color.fromARGB(255, 158, 155, 155),
                   fontWeight: FontWeight.bold),
             ),
           ),
@@ -53,7 +52,7 @@ class SkillSection extends StatelessWidget {
                               style: GoogleFonts.montserrat(
                                   fontSize: 17,
                                   fontWeight: FontWeight.w500,
-                                  color: Colors.black),
+                                  color: const Color.fromARGB(255, 241, 239, 239)),
                             )
                           ],
                         ),
@@ -67,7 +66,7 @@ class SkillSection extends StatelessWidget {
               'LEARNING :',
               style: GoogleFonts.montserrat(
                   fontSize: 18,
-                  color: Colors.black,
+                  color:Color.fromARGB(255, 158, 155, 155),
                   fontWeight: FontWeight.bold),
             ),
           ),
@@ -96,15 +95,14 @@ class SkillSection extends StatelessWidget {
                               style: GoogleFonts.montserrat(
                                   fontSize: 17,
                                   fontWeight: FontWeight.w500,
-                                  color: Colors.black),
+                                  color: const Color.fromARGB(255, 242, 240, 240)),
                             )
                           ],
                         ),
                       )),
             ),
           ),
-           spaceForHeight,
-         
+          spaceForHeight,
         ],
       ),
     );

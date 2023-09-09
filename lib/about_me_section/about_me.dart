@@ -12,13 +12,12 @@ class AboutME extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    double screenHeight = size.height;
     double screenWidth = size.width;
 
     return Container(
       width: double.infinity,
       // height: screenHeight*1.20,
-      color: Color(0xFF11071F),
+      color:const Color(0xFF11071F),
       child: Column(
         children: [
           spaceForHeight,
@@ -35,19 +34,26 @@ class AboutME extends StatelessWidget {
           spaceForHeight,
           const CustomUnderlying(),
           spaceForHeight,
-          Container(
+          SizedBox(
             width: 800,
-            height: 500,
-            color: Colors.white,
+            height: 380,
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment(0, -0.5),
+                  alignment:const Alignment(0, -0.5),
                   child: Container(
-                  
-                    height: screenWidth * 0.50,
-                    width: screenWidth * 0.40,
-                    decoration: BoxDecoration(color: Colors.amber, shape: BoxShape.circle),
+                    height: screenWidth * 0.40,
+                    width: screenWidth * 0.25,
+                    decoration:const BoxDecoration(
+                      
+                        gradient: RadialGradient(
+                          radius: 0.5,
+                          colors: [
+                          Color.fromARGB(218, 118, 60, 172),
+                           Color.fromARGB(141, 118, 60, 172),
+                          Color.fromARGB(49, 38, 16, 69),
+                        ]),
+                        shape: BoxShape.circle),
                   ),
                 ),
                 GridView.builder(
@@ -62,6 +68,7 @@ class AboutME extends StatelessWidget {
                   itemBuilder: (context, index) => Container(
                     padding: const EdgeInsets.only(top: 15),
                     decoration: BoxDecoration(
+                      
                       gradient: const LinearGradient(
                           begin: Alignment.bottomRight,
                           end: Alignment.topLeft,
@@ -111,6 +118,7 @@ class AboutME extends StatelessWidget {
               ],
             ),
           ),
+          spaceForHeight,
           const CustomUnderlying(),
         ],
       ),
