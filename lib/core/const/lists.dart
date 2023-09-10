@@ -49,14 +49,39 @@ List<String> skillLearning = [
 List<String> skillLearningNames = ['KOTLIN', 'JAVA', 'NODE JS', 'PYTHON'];
 
 List<String> projectDescription = [
-  'FITX is a fitness training app providing a personalized experienced to users to achieve their fitness goals, through the categorized exercises and trainers.users can perform verity of exercises through this app, they can track calorie, exercises and categories. and users can upload images to track their transformation journey, they can message trainers if they uypgrade the plan only.This app developed with flutter framework, I used REST API for fecthing data from backend for state management and architecture i used BLOC pattern.',
-  'README is a story reading app users can read lot of categorized stries such as horror, romance, comedy , history etc. they can add stories in to favourite. if they want read other documents they can pick from their device and read through my project.there have a admin page for uploading new stories I created this project with flutter framework for state management i used BLOC pattern , I used firebase as my backend system , i utlized firebase auth, firestore and firebase storage.',
-  'Netflix clone is clone project of netflix ,in home page can see lot of categorized movies like popular, trending etc , and also i implemented searching in this project , i used TMDB api for fecthing movie data , for network request i used http package, this project help me to get a clear and deep understanding about REST API and http , and i improved lot of things through this project,like i used some advanced UI widgets package.',
-  'Student managment is simple management project , we can add students with specify thier image, name, age, domain and phone number and when clicked add button the datas will store into hive local database , after adding the datas will shown in home page with only name and image when we clicke that we can see detailed informations about that student ,trough this projec i got good understanding about hive database and flutter advanced widgets, this project make me pro in flutter.'
+  'A Fitness training app, where users can sign up,perform a variety of exercises, set goals for calories and exercises, upload images for tracking their transformation journey and they can message with trainers.',
+  'Developed a story-reading app using Flutter and Dart, where users can sign up,read categorized stories, add stories to favorites and they can read local PDFs.',
+  'A Netflix clone Developed with Flutter and Dart, used TMDB API for getting movies and utilized REST API for fetching data and http package used for network requests.',
+  'A student management project developed with Flutter and Dart. implemented HIVE for local database and Shared preference for local storage.'
 ];
-List<String>projectNames=['FITX','README','NETFLIX CLONE','STUDENT MANAGMENT'];
 
-List<String>projectPlayStorelinks=['https://play.google.com/store/apps/details?id=com.mspk.FitX','https://play.google.com/store/apps/details?id=com.mspk.read_me','',''];
-List<String>projectGitlinks=['https://github.com/suhail9645/fitx_user','https://github.com/suhail9645/readme','https://github.com/suhail9645/netflix_clone','https://github.com/suhail9645/student_project'];
-List<String>textFormhints=['Enter your name','Enter your Email address','Enter phone number','Your message'];
-List<String>navbarTexts=['Home','My Works','About Me'];
+List<String> projectTechnolagies = [
+  'Developed with Flutter framework, used BLOC pattern for  state management and architectural pattern, implemented REST API for fetching data from backend, for authorization used JWT token and Integrated Razorpay for secure payment processing.',
+  'Developed with Flutter framework and Dart programming language ,used BLOC pattern for state management and DDD architecture for architectural pattern, implemented FIREBASE as the backend, utilized Firestore, Auth and Storage .used HIVE as local database and Shared preference used for local storage.',
+];
+List<String> projectNames = [
+  'FITX',
+  'README',
+  'NETFLIX CLONE',
+  'STUDENT MANAGMENT'
+];
+
+List<String> projectPlayStorelinks = [
+  'https://play.google.com/store/apps/details?id=com.mspk.FitX',
+  'https://play.google.com/store/apps/details?id=com.mspk.read_me',
+  '',
+  ''
+];
+List<String> projectGitlinks = [
+  'https://github.com/suhail9645/fitx_user',
+  'https://github.com/suhail9645/readme',
+  'https://github.com/suhail9645/netflix_clone',
+  'https://github.com/suhail9645/student_project'
+];
+List<String> textFormhints = [
+  'Enter your name',
+  'Enter your Email address',
+  'Enter phone number',
+  'Your message'
+];
+List<String> navbarTexts = ['Home', 'My Works', 'About Me'];
