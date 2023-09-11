@@ -84,4 +84,6 @@ List<String> textFormhints = [
   'Enter phone number',
   'Your message'
 ];
-List<String> navbarTexts = ['Home', 'My Works', 'About Me'];
+List<String> navbarTexts = ['About Me','Skills', 'My Works', ];
+
+List<String> projectImages=['https://i.ibb.co/VWjfs1j/Whats-App-Image-2023-07-18-at-18-41-25-2.jpg','https://i.ibb.co/f1Qtvyx/readme.webp','https://i.ibb.co/h2gfXyq/Screenshot-2023-09-11-20-05-49-93-ec1c2c8614ed4a7bfb837508e931573b.jpg','https://i.ibb.co/MZPb8L2/Screenshot-2023-09-11-20-09-30-47-4e27fe297605351979d9d168eea8e0ee.jpg'];

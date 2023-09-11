@@ -1,5 +1,8 @@
 
+import 'dart:html' as html;
+
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../core/const/widget.dart';
 
@@ -60,17 +63,28 @@ class HomePageSideContainer extends StatelessWidget {
           Column(
             children: List.generate(
                 4,
-                (index) => Container(
-                     margin:const EdgeInsets.only(bottom: 10),
-                      height: 28,
-                      width: 28,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(
-                              linkImageList[index]),
+                (index) => InkWell(
+                  onHover: (value) {
+                      print('hi');
+                  },
+                  onTap: ()async {
+                    print('hi');
+                    // await launchUrl(Uri.parse('https://github.com/suhail9645/'));
+                    html.window.open('https://stackoverflow.com/questions/ask', 'new tab');
+
+                  },
+                  child: Container(
+                       margin:const EdgeInsets.only(bottom: 10),
+                        height: 28,
+                        width: 28,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(
+                                linkImageList[index]),
+                          ),
                         ),
                       ),
-                    )),
+                )),
           )
         ],
       ),

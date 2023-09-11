@@ -169,7 +169,7 @@ class HomePage extends StatelessWidget {
                         height: screenHeight,
                         width: screenWidth / 2,
                         decoration: const BoxDecoration(
-                           color: const Color(0xFF11071F),
+                           color:  Color(0xFF11071F),
                             image: DecorationImage(
                                 image: AssetImage('assets/image.png'),
                                 fit: BoxFit.cover)),
@@ -230,7 +230,7 @@ class HomePage extends StatelessWidget {
                                                         Colors.transparent)),
                                             onPressed: () {},
                                             child: const Text(
-                                              'Message Me',
+                                              'Contact Me',
                                               style: TextStyle(
                                                   color: Colors.white),
                                             )),
@@ -258,7 +258,7 @@ class HomePage extends StatelessWidget {
               const AboutME(),
               const SkillSection(),
               const Portfolio(),
-              const ContactMe()
+             
             ],
           ),
         ));
