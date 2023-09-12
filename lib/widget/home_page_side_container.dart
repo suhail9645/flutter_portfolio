@@ -1,5 +1,6 @@
 
 import 'dart:html' as html;
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -16,6 +17,7 @@ class HomePageSideContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return SizedBox(
       height: double.infinity,
       width: 100,
@@ -63,17 +65,11 @@ class HomePageSideContainer extends StatelessWidget {
           Column(
             children: List.generate(
                 4,
-                (index) => InkWell(
-                  onHover: (value) {
-                      print('hi');
+                (index) => IconButton(
+                  onPressed: () {
+                   html.window.open('https://www.instagram.com/akshitmadan_/', '_blank');
                   },
-                  onTap: ()async {
-                    print('hi');
-                    // await launchUrl(Uri.parse('https://github.com/suhail9645/'));
-                    html.window.open('https://stackoverflow.com/questions/ask', 'new tab');
-
-                  },
-                  child: Container(
+                 icon: Container(
                        margin:const EdgeInsets.only(bottom: 10),
                         height: 28,
                         width: 28,

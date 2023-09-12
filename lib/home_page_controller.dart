@@ -8,6 +8,8 @@ class HomePageController extends GetxController {
   onTextHover(int index) {
   navbarTextsValue[index]=!navbarTextsValue[index];
   }
-
+ onSocialMediaClicked(){
+  print('hello');
+ }
  
 }

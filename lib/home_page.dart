@@ -137,23 +137,26 @@ class HomePage extends StatelessWidget {
                                     SizedBox(
                                       width: screenWidth * 0.07,
                                     ),
-                                    Container(
-                                      height: 40,
-                                      width: 140,
-                                      decoration: BoxDecoration(
-                                        gradient: const LinearGradient(colors: [
-                                          Color.fromARGB(255, 28, 3, 89),
-                                          Color.fromARGB(207, 0, 0, 0),
-                                          Color.fromARGB(255, 20, 2, 67)
-                                        ]),
-                                        borderRadius: BorderRadius.circular(25),
+                                    InkWell(
+                                     onTap: () => print('lkajkla'),
+                                      child: Container(
+                                        height: 40,
+                                        width: 140,
+                                        decoration: BoxDecoration(
+                                          gradient: const LinearGradient(colors: [
+                                            Color.fromARGB(255, 28, 3, 89),
+                                            Color.fromARGB(207, 0, 0, 0),
+                                            Color.fromARGB(255, 20, 2, 67)
+                                          ]),
+                                          borderRadius: BorderRadius.circular(25),
+                                        ),
+                                        child: const Center(
+                                            child: Text(
+                                          'Download CV',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        )),
                                       ),
-                                      child: const Center(
-                                          child: Text(
-                                        'Download CV',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
-                                      )),
                                     ),
                                   ],
                                 ),
@@ -193,7 +196,9 @@ class HomePage extends StatelessWidget {
                                             onHover: (value) {
                                               controller.onTextHover(index);
                                             },
-                                            onTap: () {},
+                                            onTap: () {
+                                              print('hai');
+                                            },
                                             child: AnimatedDefaultTextStyle(
                                               duration: const Duration(
                                                   milliseconds: 100),
